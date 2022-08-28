@@ -2,6 +2,8 @@ import Image from '../Image'
 import Link from 'next/link'
 
 const DisplayMedium = ({ imageSrc, title, subtitle, link }) => {
+  console.log('DisplayMedium:title:', title)
+
   return (
     <div className="
     mb-4 lg:mb-0

@@ -1,12 +1,8 @@
 import { useState } from 'react'
 import Head from 'next/head'
-import { SiteContext, ContextProviderComponent } from "../context/mainContext"
-import DENOMINATION from "../utils/currencyProvider"
+import { v4 as uuid } from "uuid"
 import { FaLongArrowAltLeft } from "react-icons/fa"
 import Link from "next/link"
-import Image from "../components/Image"
-import { v4 as uuid } from "uuid"
-
 import {
   CardElement,
   Elements,
@@ -14,6 +10,12 @@ import {
   useElements,
 } from "@stripe/react-stripe-js"
 import { loadStripe } from "@stripe/stripe-js"
+
+import { SiteContext, ContextProviderComponent } from "../context/mainContext"
+import DENOMINATION from "../utils/currencyProvider"
+import Image from "../components/Image"
+
+
 
 // Make sure to call `loadStripe` outside of a component’s render to avoid
 // recreating the `Stripe` object on every render.

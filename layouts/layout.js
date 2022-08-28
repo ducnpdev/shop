@@ -8,10 +8,11 @@ import LayoutFooter from '../layouts/footer';
 import LayoutHeader from '../layouts/header';
 
 export default function Layout({ children, categories }) {
-  console.log(categories)
   if (categories.length > navItemLength) {
     categories = categories.slice(0, navItemLength)
   }
+  console.log("Layout:",categories)
+
 
   return (
     <div>
@@ -52,7 +53,12 @@ export default function Layout({ children, categories }) {
                           sm:mr-8 sm:mb-0
                           mb-4 text-left text-smaller mr-4
                         ">
-                        {category.charAt(0).toUpperCase() + category.slice(1)}
+                        {
+                        category.charAt(0).toUpperCase() + category.slice(1)
+                        }
+                        {
+                          console.log('layout.js-category',category)
+                        }
                       </p>
                     </a>
                   </Link>
@@ -81,7 +87,7 @@ export default function Layout({ children, categories }) {
 
       <LayoutFooter />
 
-      <ToastContainer autoClose={3000} />
+      {/* <ToastContainer autoClose={3000} /> */}
     </div>
   )
 }
